@@ -1,0 +1,477 @@
+<html>
+<head>
+<title>Reports</title>
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+    font-family: "Lato", sans-serif;
+    transition: background-color .5s;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+div{
+	max-width:1410px;
+	height:100px;
+}
+.mrgn{
+	border: 1px solid red;
+    margin-top: 10px;
+    margin-bottom:1px;
+    margin-right:20px;
+    margin-left: 20px;
+	background-color:lightpink;
+	height:60px;
+}
+.btn{
+	background-color:orange;
+	border:none;
+	color:white;
+	padding:7px 12px;
+	font-size:16px;
+	cursor:pointer;
+	font-size:20px;
+}
+.btn:hover{
+	background-color:lightgrey;
+}
+.btn1{
+	background-color:grey;
+	border:none;
+	color:white;
+	padding:7px 7px;
+	font-size:16px;
+	cursor:pointer;
+	font-size:20px;
+}
+.btn2{
+	background-color:green;
+	border:none;
+	color:white;
+	padding:7px 19px;
+	font-size:16px;
+	cursor:pointer;
+	font-size:20px;
+}
+	table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+table{
+	width:95%;
+}
+th, td {
+    padding: 15px;
+}
+table#t01 th {
+    background-color: black;
+    color: white;
+}
+.div1{
+	max-width:1250px;
+	height:auto;
+	padding:40px;
+	border:3px solid black;
+}
+.div2{
+	max-width:1200px;
+	height:auto;
+	padding:0px 350px;
+}
+.div3{
+	float:left;
+	font-size:20px;
+}
+.div4{
+	float:right;
+	font-size:20px;
+}
+p.a{
+	word-spacing:50px;
+}
+p.b{
+	border-style:solid;
+	border-width:2px;
+	border-color:red;
+}
+span{
+	color:green;
+}
+</style>
+</head>
+<body>
+<div style="background-color:powderblue; max-width:1410px;height:auto"><h1 id="topsection" style="font-size:4vw"><center>REPORTS</h1></center></div>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#skipToSection">Vehicles Report</a>
+  <a href="#customer visits">Customer visits Report</a>
+  <a href="#drivers congregation">Congregation Report</a>
+  <a href="#maintenance report">Maintenance Report</a>
+  <a href="#Hos report">HOS Duty status log Report</a>
+</div>
+<div id="main">
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; select</span>
+</div>
+<img src="https://ak6.picdn.net/shutterstock/videos/8179816/thumb/1.jpg?i10c=img.resize(height:160)"height="540" width="1350">
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+    document.body.style.backgroundColor = "white";
+}
+</script>
+<br>
+<div>
+<div id="skipToSection">
+<div style="background-color:powderblue; max-width:1410px;height:auto"><h1 style="font-size:4vw"><center>VEHICLES REPORT</h1></center></div>
+<br>
+<div class="div1">
+<h2 style="font-size:2.2vw"><u>VEHICLES</u></h2>
+<hr>
+<!--add or delete entry-->
+<p><button>&plus;</button><button>&minus;</button></p>
+<div class="div2">
+<h2 style="font-size:1.5vw">Created :Nov 11 2014
+<br>
+Measurements :miles
+<br>
+Total :282
+</h2>
+</div>
+<!--data table-->
+<!div class="div1">
+<table id="t01">
+<!table style="width:100%">
+  <tr>
+    <th>Vehicle</th>
+    <th>Comment</th> 
+    <th>License Plate</th>
+	<th>VIN</th>
+	<th>Odometer</th>
+	<th>GO Device</th>
+	<th>Last stop address</th>
+	<th>Current activity</th>
+	<th>firmware version</th>
+  </tr>
+  <tr>
+    <td>AK GO6(Belarus)</td>
+    <td></td>
+    <td></td>
+	<td>1C8GYN275U2505699</td>
+    <td>3546</td>
+	<td>GO6</td>
+	<td></td>
+    <td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td>AM Chev Cruze</td>
+    <td></td>
+    <td></td>
+	<td>1G1PASSH5B7224933</td>
+    <td>54871</td>
+	<td>GO7</td>
+	<td></td>
+    <td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td>AM Dodge Caravan</td>
+    <td></td>
+    <td></td>
+	<td>1D4G124R85B357634</td>
+    <td>123996</td>
+	<td>GO7</td>
+	<td></td>
+    <td></td>
+	<td></td>
+  </tr>
+    <tr>
+    <td>AM Nissan Rogue</td>
+    <td></td>
+    <td></td>
+	<td>JN8AJJMTXAW004141</td>
+    <td>68680</td>
+	<td>GO6</td>
+	<td></td>
+    <td></td>
+	<td></td>
+  </tr>
+    <tr>
+    <td>AS GO6 Bench2</td>
+    <td></td>
+    <td></td>
+	<td>2HGFB2F42CH104470</td>
+    <td>61692</td>
+	<td>GO6</td>
+	<td></td>
+    <td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td>AS GO6 Bench3</td>
+    <td></td>
+    <td></td>
+	<td>JM1CR293X60118562</td>
+    <td>131784</td>
+	<td>GO7</td>
+	<td></td>
+    <td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td>AS GO7 Mobileye</td>
+    <td></td>
+    <td></td>
+	<td>4F2CCZ961551CM03066</td>
+	<td>237139</td>
+	<td>GO7</td>
+	<td></td>
+    <td></td>
+	<td></td>
+  </tr>
+  </table>
+ <br>
+<!--download report button -->
+<button type="button"><a href="file:///C:/Users/user/Desktop/1/1.htm" target="_blank" download>Download</a></button>
+  <br>
+  <br>
+ <button type="button"><a href="#topsection">Go to top</a></button>
+ </div>
+<!--button class="btn"><i class="fafa-download"></i><a href="file:///C:/Users/user/Desktop/1/1.htm" target="_blank" download>Download</a></button-->
+<div id="drivers congregation">
+<div style="background-color:powderblue; max-width:1410px;height:auto"><h1 style="font-size:4vw"><center>CONGREGATION REPORT</h1></center></div>
+<div class="div1">
+<h2 style="font-size:2.2vw"><u>DRIVERS CONGREGATING</u></h2>
+<hr>
+<!--add or delete entry-->
+<p><button>&plus;</button><button>&minus;</button></p>
+<div class="div2">
+<h2 style="font-size:1.5vw">Created :Oct 27,2014
+<br>
+From :Oct 26,2014 
+<br>
+To :Nov 01,2014
+</h2>
+</div>
+<!--data table-->
+<table id="t01">
+  <tr>
+    <th>Device</th>
+    <th>Driver</th> 
+    <th>Congregation</th>
+	<th>Arrived</th>
+	<th>Departed</th>
+	<th>Duration</th>
+	<th>Location</th>
+	<th>Zone Type</th>
+  </tr>
+  <tr>
+    <td>G7 Floater</td>
+    <td></td>
+    <td>Oct 26,2014 1:42:22pm for 3h 13m</td>
+	<td>Oct 26,2014 12:55:57pm</td>
+    <td>Oct 26,2014 4:55:53pm</td>
+	<td>4h,29m</td>
+	<td>101315 jerseys JumpDrive,Austin,TX,78733,United</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>2012 Mercedes C300</td>
+    <td></td>
+    <td>Oct 26,2014 1:42:22pm for 3h 13m</td>
+	<td>Oct 26,2014 9:37:43pm</td>
+    <td>Oct 26,2014 9:37:43am</td>
+	<td>19h,55m</td>
+	<td>101315 jerseys JumpDrive,Austin,TX,78733,United</td>
+    <td></td>
+  </tr>
+    </table>
+ <br>
+<!--download report button -->
+<button type="button"><a href="file:///C:/Users/user/Desktop/1/1.htm" target="_blank" download>Download</a></button>
+  <br>
+  <br>
+ <button type="button"><a href="#topsection">Go to top</a></button>
+
+</div>
+<div id="customer visits">
+<div style="background-color:powderblue; max-width:1410px;height:auto"><h1 style="font-size:4vw"><center>CUSTOMER VISITS REPORT</h1></center></div>
+<div class="div1">
+<H1><u><b>CUSTOMER VISITS</b></u></H1>
+<div style="background-color:powderblue; max-width:1410px;height:auto"><h1 style="font-size:2vw">AB-Toyota Avensis GO6</h1></div>
+<p class="div3">
+Kosino<br>
+Kosino
+</p>
+<p class="div4">
+Time of arrival:10/25/14 4:41:33am Duration:1d19h Time of departure:10/27/14 12:29:38am Latitude: Longitude: <button><i class="fa fa-search"></i></button>
+    
+<br>
+Time of arrival:10/27/14 11:13:27am Duration:0s Time of departure:10/27/14 11:13:27am Latitude: Longitude:&emsp; <button><i class="fa fa-search"></i></button>
+</p>
+<br><br><br><br>
+<div style="background-color:powderblue; max-width:1410px;height:auto"><h1 style="font-size:2vw">AK GO6(Belarus)</h1></div>
+<p class="div3">
+Andre's <br>Summer Cottage
+</p>
+<p class="div4">
+Time of arrival:10/26/14 3:47:40am Duration:4h 44m Time of departure:10/26/14 8:31:57am Latitude: Longitude: <button><i class="fa fa-search"></i></button>
+</p>
+<br><br><br><br>
+<div style="background-color:powderblue; max-width:1410px;height:auto"><h1 style="font-size:2vw">Alex GO7</h1></div>
+<p class="div3">
+1081 South <br>Service Road West<br>Oakville,ON,L6L<br>5T7,Canada<br>
+871,Cranberry <br>Ct,Oakville<br>ON,L6L,5T7<br>Canada
+</p>
+<p class="div4">
+Time of arrival:10/27/14 6:10:36am Duration:0s Time of departure:10/27/14 6:10:36am Latitude: Longitude: <button><i class="fa fa-search"></i></button>
+<br>
+Time of arrival:10/27/14 6:10:36am Duration:0s Time of departure: Latitude:10/27/14 6:10:36am Longitude: <button><i class="fa fa-search"></i></button>
+</p>
+<br><br><br><br><br><br><br><br><br><br><br><br><p>
+<!--download report button -->
+<button type="button"><a href="file:///C:/Users/user/Desktop/1/1.htm" target="_blank" download>Download</a></button>
+  <br>
+  <br>
+ <button type="button"><a href="#topsection">Go to top</a></button></p>
+</div>
+<div id="maintenance report">
+<div style="background-color:powderblue; max-width:1410px;height:auto"><h1 style="font-size:4vw"><center>MAINTENANCE HISTORY REPORT</h1></center></div>
+<div class="div1">
+<H1><u><b>MAINTENANCE HISTORY</b></u></H1>
+<div style="background-color:powderblue; max-width:1410px;height:auto"><h1 style="font-size:2vw">Vehicle:JG Go7&emsp;&ensp; Reminder:Oil Change</h1></div>
+<p class="div3">
+10/22/14<br>
+10/22/14<br>
+10/11/14
+</p>
+<p class="div4">
+Calculated Odometer:524mi Adjusted Odometer:311mi Calculated Engine Hours:566h Adjusted Engine Hours:566h  
+<br>
+Calculated Odometer:524mi Adjusted Odometer:524mi Calculated Engine Hours:566h Adjusted Engine Hours:566h 
+<br>
+Calculated Odometer:1429mi Adjusted Odometer:1401mi Calculated Engine Hours:594h Adjusted Engine Hours:590h 
+</p>
+<br><br><br><br><br>
+<div style="background-color:powderblue; max-width:1410px;height:auto"><h1 style="font-size:2vw">Vehicle:JG Go7 &emsp;&ensp;Reminder:Tire Rotation DA</h1></div>
+<p class="div3">
+11/05/14
+</p>
+<p class="div4">
+Calculated Odometer:1300mi Adjusted Odometer:1300mi Calculated Engine Hours:564h Adjusted Engine Hours:564h 
+</p>
+<br><br><br><br>
+<!--download report button -->
+<button type="button"><a href="file:///C:/Users/user/Desktop/1/1.htm" target="_blank" download>Download</a></button>
+  <br>
+  <br>
+ <button type="button"><a href="#topsection">Go to top</a></button>
+</div>
+<div id="Hos report">
+<div style="background-color:powderblue; max-width:1410px;height:auto"><h1 style="font-size:4vw"><center>HOS DUTY STATUS LOG REPORT</h1></center></div>
+<br>
+<div class="div1">
+<div>
+<p class="div3">
+<u><b>DUTY STATUS LOGS</b><p></u>
+<p class="div4">Total Items : 13</p>
+</div>
+<hr>
+<div style="background-color:powderblue; max-width:1410px;height:auto"><h1 style="font-size:2vw">Thursday October,9,2014 &emsp; Driver : ABC &emsp;&emsp; Total Driving Distance : 0mi &emsp;&ensp;&emsp;&emsp;&emsp;<button style="font-size:14px"><i class="fa fa-area-chart"></i>view graph</button></h1>
+</div>
+<p class="div3">
+<button class="btn1">OFF</button>
+10/09/14 7:11:49pm<font size="2">Fruitland,Ontario,Canada</font><br><br>
+<button class="btn">ON</button>
+10/09/14 1:22:07pm <font size="2">Oakville,Ontario,Canada</font><br>
+<span>&#10004;</span>
+<br><br>
+</p>
+<p class="div4">
+HCGO7 Rog
+<br><br>
+HCGO7 Rog
+<br>
+</p>
+<br><br><br><br><br><br><br><br><br><br>
+<div style="background-color:powderblue; max-width:1410px;height:auto"><h1 style="font-size:2vw">Friday October 3,2014&emsp; Driver : ABC &emsp;&emsp; Total Driving Distance : 48mi&emsp;&ensp;&emsp;&emsp;&emsp;&emsp;<button style="font-size:14px"><i class="fa fa-area-chart"></i>view graph</button></h1></div>
+<p class="div3">
+<button class="btn1">OFF</button>
+10/03/14 7:59:23pm <font size="2">Fruitland,Ontario,Canada</font><br><span>&#10004;</span><br>
+<button class="btn">ON</button>
+10/03/14 6:38:39pm <font size="2">Hamilton,Ontario,Canada</font><br>
+<span>&#10004;</span><br>
+<button class="btn2">D</button>
+10/03/14 5:29:49pm <font size="2">Oakville,Ontario,Canada</font><br>
+<span>&#10004;</span>
+<br><br>
+</p>
+<p class="div4">
+HCGO7 Rog
+<br><br><br>
+HCGO7 Rog
+<br><br><br>
+HCGO7 Rog
+<br>
+</p>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="mrgn"><font style="color:red;">&ensp;10/03/14 5:29:49pm : Driving after more than 8 hrs rest limit<hr>&ensp;10/03/14 11:29:33pm : Maximum 60 hr on duty in 7 days.</font></div>
+<br>
+<!--download report button -->
+<button type="button"><a href="file:///C:/Users/user/Desktop/1/1.htm" target="_blank" download>Download</a></button>
+  <br>
+  <br>
+ <button type="button"><a href="#topsection">Go to top</a></button>
+</div>
+</body>
+</html>
